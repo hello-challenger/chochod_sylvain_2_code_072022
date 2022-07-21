@@ -1,0 +1,95 @@
+body {
+    background-color: aqua;
+}
+
+div#container {
+    background-color: blue;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr 4fr 3fr 1fr;
+    grid-template-areas: 
+    'menuBar menuBar'
+    "main main"
+    "article1 aside"
+    "article3 article3"
+    "toto toto";
+    height: 100vh;
+    margin: 5px;
+}
+
+header.navBar {
+    background-color: darkorange;
+    grid-area: menuBar;
+}
+
+main.main {
+    background-color: yellow;
+    grid-area: main;
+}
+
+article.article1 {
+    background-color: red;
+    grid-area: article1;
+    margin: 15px;
+    border-radius: 15px;
+}
+
+aside.article2 {
+    background-color: violet;
+    grid-area: aside;
+    margin: 15px;
+    border-radius: 15px;
+}
+
+article.article3 {
+    background-color: wheat;
+    grid-area: article3;
+}
+
+footer.basDePage {
+    background-color: yellowgreen;
+    grid-area: toto;
+}
+
+/* mon format tablette*/
+@media screen and (max-width: 900px) {
+    header.navBar {
+        background-color: springgreen;
+    }
+}
+
+/* mon format mobile */
+@media screen and (max-width: 800px) {
+
+    div#container {
+        background-color: blue;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        'menuBar'
+        "main"
+        "aside"
+        "article1"
+        "article3"
+        "toto";
+        height: 100vh;
+    }
+
+    header.navBar {
+        background-color: orchid;
+    }
+
+    article.article1 {
+        margin: 0px;
+        border-radius: 0px;
+    }
+
+    aside.article2 {
+        margin: 0px;
+        border-radius: 0px;
+    }
+    
+
+}
+
